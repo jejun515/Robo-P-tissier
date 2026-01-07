@@ -1,0 +1,22 @@
+# 동영상 파일 무시
+*.webm
+*.mp4
+backend/videos/
+
+# 가상환경 및 라이브러리 무시 (필수!)
+venv/
+env/
+backend/venv/
+__pycache__/
+*.pyc
+
+# 노드 모듈 무시
+node_modules/backend/videos/
+backend/videos/
+*.webm
+*.mp4
+backend/venv/
+venv/
+__pycache__/
+*.webm
+backend/rokey-ad6ec-firebase-adminsdk-fbsvc-848d4f8c3c.json

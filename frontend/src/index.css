@@ -1,0 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 아래는 기존에 드린 전체화면 설정 */
+html, body, #root { height: 100%; overflow: hidden; }
