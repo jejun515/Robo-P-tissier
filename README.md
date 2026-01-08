@@ -112,3 +112,13 @@ ROKEY-SYSTEM/
 │   ├── order_monitor.py      # Order Listener (Firebase 실시간 주문 감지)
 │   └── ...
 └── README.md
+```
+
+<div align="center">
+  <h3 align="center">📺 Project Demo Video</h3>
+  <a href="https://www.youtube.com/watch?v=7reKzT_osxk">
+    <img src="https://img.youtube.com/vi/7reKzT_osxk/maxresdefault.jpg" alt="ROKEY Demo Video" width="80%" style="border-radius: 10px; box-shadow: 0px 4px 10px rgba(0,0,0,0.2);">
+  </a>
+  <br/>
+  <br/>
+</div>
