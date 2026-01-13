@@ -1,5 +1,5 @@
 # 🍰 Robo-P-tissier : AI Robot Bakery Kiosk
-> **사용자의 목소리와 커스텀 그림을 그려주는 AI 로봇 파티시에 키오스크 시스템**
+> **사용자가 원하는 커스텀 그림을 그려주는 AI 로봇 파티시에 키오스크 시스템**
 
 ![Project Status](https://img.shields.io/badge/Project_Status-Active-brightgreen)
 ![Version](https://img.shields.io/badge/Version-1.0.0-blue)
