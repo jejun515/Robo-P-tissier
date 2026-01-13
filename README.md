@@ -112,6 +112,13 @@ graph TD
 
 * 목적: 집어 올린 과일을 아무데나 버리지 않고 원래 있던 트레이에 다시 놓음.
 
+<div align="center">
+  <h3>🎥 Safety Recovery Demo</h3>
+  <a href="https://youtu.be/oDFdCd45tNg">
+    <img src="https://img.youtube.com/vi/oDFdCd45tNg/maxresdefault.jpg" alt="Safety Recovery Mode" width="80%">
+  </a>
+  <p>👆 이미지를 클릭하면 시연 영상을 볼 수 있습니다.</p>
+</div>
 
 ### 3. Usage (`Recovery Trigger`)
 작업자가 안전을 확인한 후 Firebase 콘솔이나 관리자 앱에서 명령을 전송합니다.
