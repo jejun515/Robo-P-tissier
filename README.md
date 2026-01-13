@@ -17,7 +17,40 @@
 - **Coordinate Transformation**: Pixel-to-Robot Frame Mapping (Homogeneous Transformation)
 
 ---
+## 🏗️ System Architecture
+본 프로젝트는 **Firebase Realtime Database**를 중앙 허브(Middleware)로 사용하여, 세 개의 독립적인 시스템이 비동기적으로 통신하는 구조입니다.
 
+```mermaid
+graph TD
+    subgraph Frontend_Kiosk ["Frontend (Kiosk)"]
+        A[🎨 React Application]
+        A1[User Drawing Input]
+    end
+
+    subgraph Cloud_Middleware ["Cloud Middleware"]
+        B[(🔥 Firebase Realtime DB)]
+    end
+
+    subgraph Backend_Server ["Backend Server"]
+        C[🖥️ Python Server]
+        C1[Image Preprocessing]
+        C2[Path Generation Algorithm]
+    end
+
+    subgraph Robot_Control ["Robot Control"]
+        D[🤖 ROS2 Controller]
+        E[Doosan Robot Arm]
+    end
+
+    A1 -->|1. Upload Image Base64| B
+    B -->|2. Listen for New Order| C
+    C -->|3. Process & Convert to XYZ| C1
+    C1 --> C2
+    C2 -->|4. Update Path Data Json| B
+    B -->|5. Fetch Coordinates| D
+    D -->|6. Execute Motion| E
+```
+---
 ## ⚙️ Processing Pipeline
 이미지가 로봇 좌표로 변환되기까지의 5단계 파이프라인입니다.
 
