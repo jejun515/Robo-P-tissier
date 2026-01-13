@@ -115,7 +115,7 @@ graph TD
 <div align="center">
   <h3>🎥 Safety Recovery Demo</h3>
   <a href="https://youtu.be/oDFdCd45tNg">
-    <img src="https://img.youtube.com/vi/oDFdCd45tNg/maxresdefault.jpg" alt="Safety Recovery Mode" width="80%">
+    <img src="https://img.youtube.com/vi/oDFdCd45tNg/hqdefault.jpg" alt="Safety Recovery Mode" width="80%">
   </a>
   <p>👆 이미지를 클릭하면 시연 영상을 볼 수 있습니다.</p>
 </div>
