@@ -44,9 +44,9 @@
 
 ### 5. Coordinate Transformation (좌표 변환)
 이미지 좌표계(Pixel)를 로봇 베이스 좌표계(Robot Base Frame, mm)로 매핑합니다.
-$$
-\begin{bmatrix} x_{robot} \\ y_{robot} \end{bmatrix} = s \cdot \begin{bmatrix} 1 & 0 \\ 0 & -1 \end{bmatrix} \begin{bmatrix} u - c_x \\ v - c_y \end{bmatrix}
-$$
+<p align="center">
+  <img src="https://latex.codecogs.com/svg.latex?\begin{bmatrix}%20x_{robot}%20\\%20y_{robot}%20\end{bmatrix}%20=%20s%20\cdot%20\begin{bmatrix}%201%20&%200%20\\%200%20&%20-1%20\end{bmatrix}%20\begin{bmatrix}%20u%20-%20c_x%20\\%20v%20-%20c_y%20\end{bmatrix}" />
+</p>
 - **Origin Shift**: 이미지 좌상단(0,0) → 이미지 중심($c_x, c_y$)으로 원점 이동.
 - **Scale ($s$)**: Pixel 단위 → mm 단위 변환 (실제 케이크 지름 기반).
 - **Axis Flip**: 이미지 Y축(아래쪽 증가) → 로봇 Y축(위쪽 증가) 반전.
