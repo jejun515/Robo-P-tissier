@@ -103,3 +103,18 @@ def transform_to_robot_coords(contours, img_size, real_size_mm):
 <img src="images/drawing_path.png" width="100%">
 
 > **drawing_path**: 이미지에서 추출된 좌표들이 `[{x: mm, y: mm}, ...]` 형태의 JSON 배열로 변환되어 저장됩니다. 로봇은 이 좌표를 순차적으로 구독하여 작업을 수행합니다.
+
+---
+
+## 🎥 Demo Video
+프로젝트 시연 영상입니다. 이미지를 클릭하면 YouTube 영상으로 이동합니다.
+
+<div align="center">
+  <a href="https://youtu.be/Dj4nwtkIFmw">
+    <img src="https://img.youtube.com/vi/Dj4nwtkIFmw/maxresdefault.jpg" alt="Robo-Patissier Demo" width="100%">
+  </a>
+</div>
+
+<br>
+
+> **Note**: 타임랩스로 촬영된 영상입니다. 
