@@ -85,11 +85,21 @@ def transform_to_robot_coords(contours, img_size, real_size_mm):
 ---
 
 ## 📊 Result Visualization
-실제 알고리즘 구동 결과입니다. 사용자의 비정형 드로잉을 인식하여, 로봇이 끊김 없이 주행할 수 있는 단일 경로(Single Stroke)로 변환합니다.
+실제 알고리즘 구동 결과입니다. 사용자의 드로잉(Input)을 분석하여, 로봇이 끊김 없이 주행할 수 있는 최적의 경로(Vector Path)로 변환합니다.
 
-| Input Image (Raw) | Processed Path (Vectorized) |
-|:---:|:---:|
-| <img src="images/test_input.jpg" width="100%"> | <img src="images/test_result.png" width="100%"> |
+| Case | Input Image (Raw) | Processed Path (Vectorized) |
+|:---:|:---:|:---:|
+| **Case 1<br>(Complex)** | <img src="images/도라이몽.png" width="100%"> | <img src="images/doraemon.png" width="100%"> |
+| **Case 2<br>(Simple)** | <img src="images/유령.png" width="100%"> | <img src="images/ghost.png" width="100%"> |
+| **Case 3<br>(Simple)** | <img src="images/강아지.png" width="100%"> | <img src="images/dog1.png" width="100%"> |
+| **Case 4<br>(Simple)** | <img src="images/3.png" width="100%"> | <img src="images/dog2.png" width="100%"> |
 
-> **Left**: 사용자 입력 원본 (이진화 및 전처리 적용) <br>
-> **Right**: 최종 생성된 로봇 경로 (무지개색: 주행 방향 및 순서 / 빨간 점: 시작점)
+> **Case 1 (Doraemon)**: 복잡한 캐릭터의 곡선과 세밀한 특징을 보존하며 경로 생성 <br>
+> **Case 2 (Ghost)**: 단순한 외곽선의 끊어진 부분을 자동으로 연결(Smart Connection)하여 처리
+
+### 💾 Generated Data Structure (Firebase)
+최종 변환된 경로 데이터는 Firebase Realtime Database의 `drawing_path` 필드에 업로드되어 로봇과 동기화됩니다.
+
+<img src="images/drawing_path.png" width="100%">
+
+> **drawing_path**: 이미지에서 추출된 좌표들이 `[{x: mm, y: mm}, ...]` 형태의 JSON 배열로 변환되어 저장됩니다. 로봇은 이 좌표를 순차적으로 구독하여 작업을 수행합니다.
