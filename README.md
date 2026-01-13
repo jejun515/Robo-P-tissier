@@ -80,7 +80,22 @@ Three.js를 활용하여 선택한 시럽, 토핑, 파우더가 적용된 케이
 
 로봇 팔의 움직임과 크리스마스 테마 배경(눈 내리는 효과) 렌더링
 
-4. 🤖 로봇 제어 및 안전 시스템 (Robot Control)
+4. 📹 케이크 제작 타임랩스 (Auto Timelapse)
+로봇이 케이크를 만드는 모든 과정을 카메라가 자동으로 녹화.
+
+작업이 완료되면 **배속 영상(Timelapse)**으로 자동 변환되어 고객에게 제공.
+
+소중한 추억을 QR 코드나 앱을 통해 다운로드 가능.
+
+<div style="flex: 1; text-align: center;">
+    <img src="QR.png" width="150" alt="Service QR Code">
+    <br>
+    <span style="font-size: 11px; color: gray;">Scan to View Demo</span>
+</div>
+
+***위 QR을 실제로 찍어보세요 케이크 제작과정을 보실 수 있습니다***
+
+5. 🤖 로봇 제어 및 안전 시스템 (Robot Control)
 주문 대기열(Queue) 관리 및 비동기 작업 처리
 
 좌표 변환: 이미지 픽셀 좌표(Pixel) → 로봇 물리 좌표(mm) 자동 보정
