@@ -80,3 +80,16 @@ def transform_to_robot_coords(contours, img_size, real_size_mm):
         robot_paths.append(pts_mm)
         
     return robot_paths
+
+```
+---
+
+## 📊 Result Visualization
+실제 알고리즘 구동 결과입니다. 사용자의 비정형 드로잉을 인식하여, 로봇이 끊김 없이 주행할 수 있는 단일 경로(Single Stroke)로 변환합니다.
+
+| Input Image (Raw) | Processed Path (Vectorized) |
+|:---:|:---:|
+| <img src="images/test_input.jpg" width="100%"> | <img src="images/test_result.png" width="100%"> |
+
+> **Left**: 사용자 입력 원본 (이진화 및 전처리 적용) <br>
+> **Right**: 최종 생성된 로봇 경로 (무지개색: 주행 방향 및 순서 / 빨간 점: 시작점)
