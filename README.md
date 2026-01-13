@@ -7,9 +7,11 @@ ROS 2 네트워크 상의 로봇 관절 정보(Joint State)와 TCP 좌표(TF)를
 
 # 🛠 Tech Stack
 - Languages & Environment
+
 <img src="https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white"> <img src="https://img.shields.io/badge/ROS 2-Humble-22314E?style=for-the-badge&logo=ros&logoColor=white"> <img src="https://img.shields.io/badge/Ubuntu-22.04-E95420?style=for-the-badge&logo=ubuntu&logoColor=white">
 
 - Core Libraries & Cloud
+
 <img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black"> <img src="https://img.shields.io/badge/TF2_ROS-Geometry-blue?style=for-the-badge&logo=ros&logoColor=white"> <img src="https://img.shields.io/badge/DSR_Msgs2-Doosan-C70025?style=for-the-badge&logo=robot&logoColor=white">
 
 ## ⚙️ Synchronization Logic
