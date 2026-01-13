@@ -1,11 +1,11 @@
-# 🍰 ROKEY SYSTEM : AI Robot Bakery Kiosk
+# 🍰 Robo-P-tissier : AI Robot Bakery Kiosk
 > **사용자의 목소리와 커스텀 그림을 그려주는 AI 로봇 파티시에 키오스크 시스템**
 
 ![Project Status](https://img.shields.io/badge/Project_Status-Active-brightgreen)
 ![Version](https://img.shields.io/badge/Version-1.0.0-blue)
 
 ## 📖 프로젝트 개요 (Project Overview)
-**ROKEY SYSTEM**은 사용자가 웹 키오스크를 통해 케이크를 주문하면, **두산 로보틱스(Doosan Robotics)** 의 로봇 팔이 실제 케이크 위에 데코레이션을 수행하는 통합 자동화 시스템입니다.
+**Robo-P-tissier**는 사용자가 웹 키오스크를 통해 케이크를 주문하면, **두산 로보틱스(Doosan Robotics)** 의 로봇 팔이 실제 케이크 위에 데코레이션을 수행하는 통합 자동화 시스템입니다.
 
 단순한 터치 주문을 넘어, **생성형 AI(Voice, Image)** 기술을 도입하여 다음과 같은 혁신적인 경험을 제공합니다.
 1.  **AI 음성 상담:** 사용자가 마치 점원과 상담하듯이 OPEN AI의 Whisper를 사용하여 AI가 음성상담 및 음성으로 주문을 도와줍니다.
