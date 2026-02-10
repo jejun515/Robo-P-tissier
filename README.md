@@ -158,3 +158,19 @@ flowchart TD
 | **이승준** | **💻 Full-Stack Dev** | • React/FastAPI 기반 웹 서비스 및 실시간 DB(Firebase) 구축<br>• 관리자용 매출 통계 대시보드 및 로봇 상태 관제 시스템 개발<br>• 고객 알림 서비스 및 작업 타임랩스 기능 구현 |
 | **안효원** | **🤖 Robotics & AI** | • ROS2 기반 로봇 공정 환경 구성 및 시럽 드로잉 제어<br>• YOLOv8 객체 인식 모델 학습 및 토핑 위치 데이터 추출<br>• 실시간 사용자 인식 및 휴먼-로봇 인터랙션(HRI) 구현 |
 | **한지엽** | **🎙️ AI & Contents** | • OpenAI Whisper 기반 음성 주문 인터페이스 및 NLU 모델 구현<br>• 토핑 배치 로직 설계 및 하드웨어 공정 최적화<br>• 프로젝트 홍보 영상 제작 및 대외 콘텐츠 총괄 |
+
+---
+
+## 7. Project Structure & Branch Guide
+
+본 프로젝트는 `main` 브랜치에서 전체 문서를 관리하며, **실제 소스 코드는 각 기능별 브랜치에서 확인하실 수 있습니다.** 아래 구조도와 표를 참고하여 원하는 파트의 코드를 확인해 주세요.
+
+### 🗂️ Branch Tree
+```bash
+Robo-Patissier
+├── 📜 main             # [Docs] 프로젝트 통합 문서 및 개요
+├── 📂 feature/web      # [Web] 웹 대시보드 & 백엔드 
+├── 📂 feature/coordinate_convert # [Coordinate] 이미지 변환 알고리즘  
+├── 📂 feature/robot_control   # [Robot] 로봇 제어 및 예외 처리 
+└── 📂 feature/state_check    # [State] 로봇 상태 DB 업데이트 
+```
