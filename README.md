@@ -55,8 +55,74 @@
 * **Sensor**: Intel RealSense Camera
 
 ---
+## 3. System Architecture & Flow Chart
 
-## 3. Core Technologies (핵심 기술)
+### 🏗️ System Architecture
+주문부터 로봇 제어 및 AI 검사까지의 통합 데이터 흐름도입니다.
+
+```mermaid
+graph TD
+    subgraph "User Interface"
+        UI[React Web Dashboard]
+        Voice[OpenAI Whisper Voice AI]
+    end
+
+    subgraph "Backend & Cloud"
+        Server[FastAPI Server]
+        DB[(Firebase Realtime DB)]
+        Cloud[Google Drive API / CoolSMS]
+    end
+
+    subgraph "Robot Control (ROS2 Humble)"
+        ROS[ROS2 Master Node]
+        Path[Image to Path Converter]
+        Control[Doosan Robot Language - DRL]
+    end
+
+    subgraph "Vision & Hardware"
+        Vision[YOLOv8 / OpenCV]
+        Robot[Doosan M0609 Robot]
+        Sensor[Intel RealSense Camera]
+    end
+
+    UI & Voice --> Server
+    Server <--> DB
+    DB <--> ROS
+    ROS --> Path --> Control --> Robot
+    Robot <--> Sensor
+    Sensor --> Vision
+    Vision -- Inspection Result --> DB
+```
+### 🔄 Process Flow Chart
+AI 검사 및 공정별 안전 복구 로직이 포함된 전체 공정 흐름도입니다.
+
+```mermaid
+flowchart TD
+    Start([주문 시작: Web/Voice]) --> Design[디자인 선택 및 생성]
+    Design --> Convert[이미지 좌표 변환 및 경로 최적화]
+    
+    subgraph "Main Process"
+        Step1[시럽 드로잉 공정] --> Step2[파우더 도포 공정]
+        Step2 --> Step3[토핑 배치 공정]
+    end
+    
+    Convert --> Step1
+    Step3 --> Vision{AI Vision 품질 검사}
+    
+    Vision -- "미흡 발생 (Retouch)" --> Step1
+    Vision -- "검사 통과 (Pass)" --> Finish[픽업대로 이동 및 완료 알림]
+    
+    subgraph "Safety Logic"
+        Error{오류/비상정지 발생?} -- Yes --> Recovery[공정별 후처리 로직 실행]
+        Recovery --> Home[안전 홈 위치 복귀]
+    end
+    
+    Step1 & Step2 & Step3 -.-> Error
+    Finish --> End([프로젝트 종료])
+```
+---
+
+## 4. Core Technologies (핵심 기술)
 
 ### 👁️ AI Vision: YOLOv8 & Real-time Inspection
 단순한 자동화를 넘어, **지능형 품질 검사**를 수행합니다.
@@ -74,7 +140,7 @@
 
 ---
 
-## 4. Safety & Recovery System (안전 및 복구)
+## 5. Safety & Recovery System (안전 및 복구)
 
 실제 운영 환경에서의 변수를 고려하여, 단순 중단이 아닌 **연속성을 확보하는 복구 시스템**을 구축했습니다.
 
@@ -84,7 +150,7 @@
 
 ---
 
-## 👥 Team Members & Roles (팀원 및 역할)
+## 6. Team Members & Roles (팀원 및 역할)
 
 | 이름 | 역할 | 주요 담당 업무 |
 | :--- | :--- | :--- |
